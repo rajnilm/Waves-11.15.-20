@@ -1,0 +1,236 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\setlength{\arrayrulewidth}{0.5mm}
+\setlength{\tabcolsep}{18pt}
+\renewcommand{\arraystretch}{1.5}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\begin{document}
+
+
+\title{Waves(20) 11.15}
+\author{EE23BTECH11051-Rajnil Malviya}
+\date{January 2024}
+
+
+
+\maketitle
+
+\subsection*{\textbf{Question :-}}
+A train, standing at the outer signal of a railway station blows a whistle of frequency
+400 Hz in still air. (i) What is the frequency of the whistle for a platform observer
+when the train (a) approaches the platform with a speed of $10 ms^{-1} $, (b) recedes
+from the platform with a speed of $10 ms^{-1} $? (ii) What is the speed of sound in each
+case ? The speed of sound in still air can be taken as $340 ms^{-1} $.
+
+\bigskip
+Solution :-\\
+         \begin{table}[h]
+        \input{tables/parametertable}
+    \end{table}
+
+(i)  a. When the train approaches the platform (i.e., the observer at rest),
+\bigskip
+\begin{align}f'_a=f\times\frac{v}{v-v_s}\end{align}
+
+$$f'_a=400\times\frac{340}{340-10}$$
+
+$$f'_a=412.1212$$
+\bigskip
+
+b. When the train recedes the platform (i.e., the observer at rest),
+\bigskip
+
+$f'_r $ is frequency observed by observer when train is receding platform,\\
+\begin{align}f'_r=f\times\frac{v}{v+v_s}\end{align}
+
+$$f'_r=400\times\frac{340}{340+10}$$
+
+$$f'_r=388.5714$$\\
+(ii) The speed of sound in each will be same.It is $340  ms^{-1}$ in each case.
+\subsection*{\textbf{Equation of Sound Wave :-}}
+Sound Wave is transmission of energy ; sound wave depends on many parameters . A general equation of sound wave is shown below 
+\begin{align}y(t) = Asin( 2 \pi ft + \phi ) \end{align} 
+\textit{y(t) is instantaneous 
+displacement of wave at time t;}$$\textit{A is amplitude of wave;}$$$$f\;is\; frequency\; of\; wave;$$
+$$t \;is\; time;$$$$\phi \; is \; phase \; angle;$$
+\includegraphics[width=0.45\textwidth]{figs/waves.jpeg}\\
+$$\lambda \;is\; wavelength\; of\; wave;$$$$crest \;is\; peak(highest\; point) \;of\; wave;$$$$trough\; is\; dip(lowest\; point) \;of\; wave;$$
+$$2\pi f \;is \; called\; angular frequency;$$
+
+On comparing our problem with equation (3) , equation for different cases are given\\\\
+$equation \;of\; sound\; wave\; when\; whistle\; is\; blown\; by$
+\textit{train is}
+$$y(t) = Asin( 2 \pi \times400\times t + \phi ) $$ 
+\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;for this case $f\;=\;400Hz$\\\\
+$equation \;of\; sound\; wave\; observed\; by\; observer\;when\\ \;train\;is\; approaching\; observer\;$
+$$y(t) = Asin( 2 \pi \times412.1212\times t + \phi ) $$ 
+\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;for this case $f\;=\;412.1212Hz$\\\\
+$equation \;of\; sound\; wave\; observed\; by\; observer\;when\\ \;train\;is\; receding\; observer\;$
+$$y(t) = Asin( 2 \pi \times388.5714\times t + \phi ) $$ 
+\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;for this case $f \;\;= \;\;388.5714Hz$\\
+\subsection*{\textbf{Doppler Effect for Sound Waves :-}}
+Doppler effect for sound wave refers to change in frequency or pitch of sound wave observed by an observer when there is a relative motion between observer and source .\\\\
+
+    \includegraphics[width=0.89\linewidth]{figs/doppler.jpg}\\\\
+
+\subsection*{\textbf{Derivation \;of \;Doppler :-}}
+To derive Doppler , we can write equation of sound as shown
+\begin{align}f = \frac{v}{\lambda}\end{align}
+using equation (4) , we get
+\begin{align}y(t) = Asin( 2 \pi \frac{v}{\lambda}t + \phi ) \end{align}  
+$$v \;is\; speed\; of\; sound\; in\; that\; medium$$
+\textbf{1.} Source is moving toward stationary Observer-\\\\
+Now consider the relative motion in which source is moving towards observer , in that case effective wavelength $\lambda'$ observed by observer will be compressed ,
+$$v_s \;is\; velocity\; of\; source$$
+$$v_o \;is\; velocity\; of\;observer $$
+$$v_s = v_s$$
+$$v_o = 0$$
+\begin{align}\lambda' = \lambda - v_s T\end{align}
+T is time period(time taken by source wave to complete one revolution)
+and effective frequency \textit{f}' observed by observer will be
+\begin{align}f' = \frac{v}{\lambda'}\end{align}
+using equations (6) and (7) , we get
+\begin{align}f' = \frac{v}{\lambda- v_s T}\end{align}
+$$f' = \frac{v f}{f(\lambda- v_s T)}$$
+we know ,
+\begin{align}T = \frac{1}{f}\end{align}
+using equation (9)
+\begin{align}f' = \frac{v f}{v- v_s }\end{align}
+\bigskip\\
+\textbf{2.} Source is moving away from stationary Observer-\\\\
+Similarly , if source is receding from observer than $\lambda, $will be increased
+$$v_s = v_s$$
+$$v_o = 0$$
+\begin{align}\lambda' = \lambda + v_s T\end{align}
+using equations (7) and (11) , we get
+\begin{align}f' = \frac{v}{\lambda+ v_s T}\end{align}
+$$f' = \frac{v f}{f(\lambda+v_s T)}$$
+using equation (9)
+\begin{align}f' = \frac{v f}{v+ v_s }\end{align}
+\newpage
+\textit{Doppler effect depends on relative velocity }, so we will use this concept to prove frequencies for different cases depending on situation .\\\\
+\textbf{3.} Observer is moving towards Stationary Source-\\\\
+In this case , the velocity at which sound is approaching observer will increase .
+$$v_s = 0$$
+$$v_o = v_o$$
+\begin{align}f' = \frac{v'}{\lambda'}\end{align}
+\begin{align}v'= v+v_o\end{align}
+$$But \;what\; about\; wavelength??$$
+It's answer is , wavelength will be same  .\\
+
+    \includegraphics[width=0.9\linewidth]{figs/wave3.png}\\\\
+Sound properties only depends on situation of source and not observer .
+\begin{align}\lambda' = \lambda\end{align}
+using equations (15) and (16) , and substituting in equation (14) 
+\begin{align}f' = \frac{v+v_o}{\lambda}\end{align}
+using equation (4) , we get 
+\begin{align}f' = \frac{(v+v_o) f}{v }\end{align}
+\textbf{4.} Observer is moving away from Stationary Source-\\\\
+In this case , the velocity at which sound is approaching observer will decrease .
+$$v_s = 0$$
+$$v_o = v_o$$
+\begin{align}v'= v-v_o\end{align}
+In this case also , wavelength will not change.
+$$\lambda' = \lambda$$
+using equations (19) and (16) , and substituting in equation (14) 
+\begin{align}f' = \frac{v-v_o}{\lambda}\end{align}
+using equation (4) , we get 
+\begin{align}f' = \frac{(v-v_o) f}{v }\end{align}\\
+\textbf{5.} Source and Observer are both moving towards each other-\\\\
+In this case , the velocity at which sound is approaching observer will increase and wavelength will compress .
+$$v_s = v_s$$
+$$v_o = v_o$$
+\begin{align}v'= v+v_o\end{align}
+\begin{align}\lambda' = \lambda - v_s T\end{align}
+using equations (22) and (23) , and substituting in equation (14) 
+\begin{align}f' = \frac{v+v_o}{\lambda-v_s T}\end{align}
+using equation (4) , we get 
+\begin{align}f' = \frac{(v+v_o) f}{v-v_s }\end{align}
+\textbf{6.} Source and Observer are both moving away from each other-\\\\
+In this case , the velocity at which sound is approaching observer will decrease and wavelength will stretch .
+$$v_s = v_s$$
+$$v_o = v_o$$
+\begin{align}v'= v-v_o\end{align}
+\begin{align}\lambda' = \lambda + v_s T\end{align}
+using equations (26) and (27) , and substituting in equation (14) 
+\begin{align}f' = \frac{v-v_o}{\lambda+v_s T}\end{align}
+using equation (4) , we get 
+\begin{align}f' = \frac{(v-v_o) f}{v +v_s}\end{align}
+\textbf{7.} Source is moving towards Observer and Observer moving away from Source-\\\\
+In this case , the velocity at which sound is approaching observer will decrease and wavelength will compress .
+$$v_s = v_s$$
+$$v_o = v_o$$
+\begin{align}v'= v-v_o\end{align}
+\begin{align}\lambda' = \lambda - v_s T\end{align}
+using equations (30) and (31) , and substituting in equation (14) 
+\begin{align}f' = \frac{v-v_o}{\lambda-v_s T}\end{align}
+using equation (4) , we get 
+\begin{align}f' = \frac{(v-v_o) f}{v -v_s}\end{align}
+\textbf{8.} Source is moving away from Observer and Observer is moving towards Source-\\\\
+In this case , the velocity at which sound is approaching observer will increase and wavelength will stretch.
+$$v_s = v_s$$
+$$v_o = v_o$$
+\begin{align}v'= v+v_o\end{align}
+\begin{align}\lambda' = \lambda + v_s T\end{align}
+using equations (34) and (35) , and substituting in equation (14) 
+\begin{align}f' = \frac{v+v_o}{\lambda+v_s T}\end{align}
+using equation (4) , we get 
+\begin{align}f' = \frac{(v+v_o) f}{v +v_s}\end{align}\\\\
+\textbf{9.} Both Source and Observer are stationary-\\\\
+If both Source and Observer are stationary , it means 
+$$v_s = 0$$
+$$v_o = 0$$
+also there will be no change in wavelength 
+\begin{align}\lambda' = \lambda\end{align}
+\begin{align}v'= v\end{align}
+using equation (38) and (39), and substituting in equation (14) 
+\begin{align}f' = \frac{v}{\lambda}\end{align}
+using equation (4) , we get 
+\begin{align}f' = f\end{align}\\\\
+
+So , Doppler effect depends on relative velocity of Observer and Source with respect to same frame and also velocity of Sound in that medium .\\\\
+On next page , we are providing a table in which various formulas of frequencies are written depending on situation .
+\newpage
+    \begin{table}[h]
+        \input{tables/table}
+    \end{table}
+\end{document}
